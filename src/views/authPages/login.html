@@ -7,15 +7,15 @@
         </div>
         <div class="auth__container">
             <%- include("../partials/_alert") -%>
-            <form class="auth__form" action="/api/auth/login" method="POST">
+            <form class="auth__form" action="/api/auth/login" method="POST" autocomplete="off">
                 <div class="auth__group">
                     <label for="name">Email</label>
                     <input type="email" id="email" name="email" placeholder="123@gmail.com" class="form__input"
-                        autocomplete="false" />
+                        autocomplete="off" />
                 </div>
                 <div class="auth__group">
                     <label for="name">Password</label>
-                    <input type="password" id="password" name="password" class="form__input" autocomplete="false" />
+                    <input type="password" id="password" name="password" class="form__input" autocomplete="off" />
                 </div>
                 <div class="auth__forget">
                     <p>Don't have an account , <a href="/register">Sign up</a></p>

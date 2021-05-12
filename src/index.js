@@ -67,7 +67,7 @@ const authRoute = require("./routes/auth.route");
 app.use("/api/auth", authRoute);
 
 app.get(`/`, (req, res) => {
-  res.render("home", {
+  res.render("index", {
     title: "Home Page",
   });
 });

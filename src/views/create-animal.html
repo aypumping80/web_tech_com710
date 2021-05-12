@@ -2,11 +2,11 @@
 
 <main>
     <section class="container unique">
-        <form class="create__form" role="form" method="post" action="/api/animals" enctype="multipart/form-data">
+        <form class="create__form" role="form" method="post" action="/api/animals" enctype="multipart/form-data" autocomplete="off">
             <%- include("./partials/_alert") -%>
             <div class="form__group">
                 <label for="name">Name</label>
-                <input type="text" id="name" name="name" placeholder="Ex: Lion" class="form__input" />
+                <input type="text" id="name" name="name" placeholder="Ex: Lion" class="form__input" autocomplete="off"/>
             </div>
             <div class="form__group">
                 <label for="upload">Upload Animal Image</label>

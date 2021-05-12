@@ -3,7 +3,7 @@
 <main>
     <section class="container unique">
         <%- include("./partials/_alert") -%>
-        <form class="create__form" role="form" method="post" action="/api/animals/<%=animal.id%>?_method=PUT">
+        <form class="create__form" role="form" method="post" action="/api/animals/<%=animal.id%>?_method=PUT"  autocomplete="off">
             <div class="form__group">
                 <label for="name">Name</label>
                 <input type="text" id="name" name="name" value="<%= animal.name %>" placeholder="Enter Animal Name"
