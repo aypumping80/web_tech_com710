@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title><%= title %></title>
+  <link rel="stylesheet" href="/css/main.css">
+
+</head>
+
+<body>
+  <nav class="navbar">
+    <a class="navbar-brand" href="/"><span>Zoo</span>Topia</a>
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="/">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/animals">Animals</a>
+      </li>
+      <% if(isAuthenticated) { %>
+      <li class="nav-item">
+        <a class="nav-link" href="/logout">Logout</a>
+      </li>
+      <%} else { %>
+      <li class="nav-item">
+        <a class="nav-link" href="/login">Login</a>
+      </li>
+      <%}%>
+    </ul>
+  </nav>

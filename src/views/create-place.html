@@ -1,0 +1,19 @@
+<%- include("./partials/_header") -%>
+
+<main>
+    <section class="container unique">
+        <%- include("./partials/_alert") -%>
+        <form class="create__form" role="form" method="post" action="/api/location">
+            <div class="form__group">
+                <label for="name">Place Name</label>
+                <input type="text" id="place" name="place" placeholder="Ex: Place Name" class="form__input"
+                    autocomplete="false" />
+            </div>
+            <div class="form__btnSection">
+                <button class="create__btn" type="submit">Create</button>
+            </div>
+        </form>
+    </section>
+</main>
+
+<%-include("./partials/_footer.ejs") -%>

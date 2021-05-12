@@ -1,0 +1,21 @@
+<%- include("./partials/_header") -%>
+
+<main>
+    <section>
+        <img src="/images/uploaded_images/<%=animal.image%>" alt="view_image" class="view__img" />
+        <div class="view__animal--heading">
+            <h1 class="text-center"><%= animal.name %></h1>
+            <div>
+                <h2>Place Found - <span><%=animal.place %></span></h2>
+                <%if(animal.isEndangered){%>
+                <h5>Endangered</h5>
+                <%}%>
+            </div>
+        </div>
+        <div class="view__animal">
+            <p><%= animal.description %></p>
+            </div>
+    </section>
+</main>
+
+<%- include("./partials/_footer") -%>

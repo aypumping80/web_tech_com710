@@ -1,0 +1,52 @@
+<%- include("./partials/_header") -%>
+
+<main>
+    <section class="container unique">
+        <form class="create__form" role="form" method="post" action="/api/animals" enctype="multipart/form-data">
+            <%- include("./partials/_alert") -%>
+            <div class="form__group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Ex: Lion" class="form__input" />
+            </div>
+            <div class="form__group">
+                <label for="upload">Upload Animal Image</label>
+                <input type="file" id="upload" name="upload" />
+            </div>
+            <div class="form__group">
+                <label for="place">Place Found</label>
+                <select name="place">
+                    <option label="none" value="">
+                        None
+                    </option>
+                    <% for(var i = 0;i < location.length;i++){%>
+                    <option label="<%= location[i].place %> " value="<%= location[i].id %>">
+                        <%= location[i].place%></option>
+                    <%}%>
+
+                </select>
+            </div>
+            <div class="form__group">
+                <h3>Endangered</h3>
+                <div>
+                    <input type="radio" id="true" name="endangered" value="true">
+                    <label for="true">True</label><br>
+                </div>
+                <div>
+                    <input type="radio" id="false" name="endangered" value="false">
+                    <label for="false">False</label><br>
+                </div>
+
+            </div>
+            <div class="form__group">
+                <textarea class="form__description" name="description" wrap="off" cols="30" rows="5">
+                </textarea>
+            </div>
+
+            <div class="form__btnSection">
+                <button class="create__btn" type="submit">Create Animal</button>
+            </div>
+        </form>
+    </section>
+</main>
+
+<%-include("./partials/_footer.ejs") -%>

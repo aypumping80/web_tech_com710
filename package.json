@@ -16,5 +16,19 @@
   "bugs": {
     "url": "https://github.com/aypumping80/web_tech_com714/issues"
   },
-  "homepage": "https://github.com/aypumping80/web_tech_com714#readme"
+  "homepage": "https://github.com/aypumping80/web_tech_com714#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "bcrypt": "^5.0.1",
+    "connect-flash": "^0.1.1",
+    "dotenv": "^9.0.2",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.2.1",
+    "express-session": "^1.17.1",
+    "method-override": "^3.0.0",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "sqlite3": "^5.0.2"
+  }
 }

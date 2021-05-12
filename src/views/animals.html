@@ -1,0 +1,83 @@
+<%- include("./partials/_header") -%>
+
+<main>
+    <section>
+        <% if(isAuthenticated){%>
+        <div class="text-right animal__section">
+            <a href="/location/" class="addLocation__btn">
+                Add new Location
+            </a>
+            <a href="/create/" class="create__btn">
+                Create New Animal
+            </a>
+        </div>
+        <%}%>
+        <div class="animal">
+            <%if(animals.length>0){%>
+
+
+
+
+
+        <div class="animal__grid">
+            <% for(var i = 0;i <animals.length;i++){%>
+            <div class="animal__card">
+                <img class="image__fit" src="/images/uploaded_images/<%=animals[i].image%>" alt="<%=animals[i].name%>"
+                 />
+                <div class="animal__content">
+                    <h3 class="animal__name"><%= animals[i].name %></h3>
+                    <% if(animals[i].isEndangered == 'true') {%>
+                    <ul class="animal__tagline">
+                        <li class="animal__class--endangered ">Endangered</li>
+                    </ul>
+                    <%}%>
+                    <% if(isAuthenticated) { %>
+                    <div class="btn__section">
+                        <button class="delete__btn" name="<%=animals[i].id%>" id="delete">
+                            Delete
+                        </button>
+                        <a href="/edit/<%=animals[i].id%>" class="edit__btn">
+                            Edit
+                        </a>
+                    </div>
+                    <%} else{%>
+                    <div class="btn__section">
+                        <a href="/pets/<%=animals[i].id%>" class="readmore__btn">
+                            More
+                        </a>
+                    </div>
+                    <%}%> 
+                   </div>
+                            </div>
+                            <%} %>
+                </div>
+                <%}else{%>
+                <div class="animal__notfound">
+                    <h2>No Animals Yet Login to add an animal</h2>
+                </div>
+
+                <%}%>
+               
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <!-- <div class='modal__overlay'>
+        <div class="modal">
+            <a href="#" title="Close" class="modal-close">Close</a>
+            <form>
+                <div class="form__group">
+                    <label for="name">Location</label>
+                    <input type="text" id="name" name="location" placeholder="Ex: Location" class="form__input"
+                        autocomplete="false" />
+            </div>
+                <div class="form__btnSection">
+                    <button class="create__btn" type="submit">Add</button>
+                </div>
+            </form>
+            
+    </div>
+    </div> -->
+</main>
+
+<%-include("./partials/_footer.ejs") -%>
