@@ -10,7 +10,7 @@ const passport = require("passport");
 const axios = require("axios");
 const { checkAuthenticatedUser } = require("./middleware");
 
-const PORT = 3002 || process.env.PORT,
+const PORT = process.env.PORT || 3002,
   baseURL = "http://localhost:" + PORT;
 
 app.use(express.static(path.join(__dirname, "public")));
@@ -93,7 +93,6 @@ app.get("/create", checkAuthenticatedUser, (req, res) => {
   axios
     .get(`${baseURL}/api/location`)
     .then((response) => {
-
       return res.render("create-animal", {
         title: "Create",
         location: response.data.data,
