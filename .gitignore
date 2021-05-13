@@ -103,6 +103,6 @@ dist
 # TernJS port file
 .tern-port
 
-src/public/images/uploaded_images/*
+src/public/images/uploaded_images/
 
-src/sqlitedb/*
+src/sqlitedb/
